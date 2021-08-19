@@ -6,7 +6,6 @@ resource "aws_iam_access_key" "pipelines" {
 }
 
 # Dividimos em duas action pois a GetAuthorizationToken precisa esta liberado em todos os recursos.
-#Obs: o RH interfere diretamente nos seguintes projetos: api-rh-digital e pwa-rh-digital.
 resource "aws_iam_user_policy" "pipelines" {
   name = "${local.project}-${var.env}-pipelines"
   user = aws_iam_user.pipelines.name
