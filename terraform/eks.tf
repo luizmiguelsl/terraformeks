@@ -25,8 +25,8 @@ module "transformacao-digital" {
 
   map_users = [
     {
-      userarn  = aws_iam_user.pipelines.arn
-      username = aws_iam_user.pipelines.name
+      userarn  = aws_iam_user.bitbucketpipelines.arn
+      username = aws_iam_user.bitbucketpipelines.name
       groups   = ["system:masters"]
     },
   ]
