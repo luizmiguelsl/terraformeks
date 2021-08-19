@@ -53,11 +53,3 @@ module "vpc" {
   }
 
 }
-
-data "aws_subnet_ids" "eks" {
-  vpc_id = module.vpc.vpc_id
-}
-
-output "all_subnets_id" {
-  value = data.aws_subnet_ids.eks.ids
-}
