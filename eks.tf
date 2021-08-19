@@ -30,15 +30,6 @@ module "transformacao-digital" {
       groups   = ["system:masters"]
     },
   ]
-  #Permite que o usuário federado con a conta do google veja os nodes na console AWS.
-  map_roles = [
-    {
-      rolearn  = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/switch"
-      username = "switch"
-      groups   = ["system:masters"]
-    }
-  ]
-
   node_groups_defaults = {
     ami_type                  = "AL2_x86_64"
     disk_size                 = 60
@@ -60,7 +51,7 @@ module "transformacao-digital" {
 
   node_groups = {
     "node" = {
-      key_name         = "aws-adt-default"
+      key_name         = "igti-btc-aws"
       desired_capacity = 2
       max_capacity     = 5
       min_capacity     = 2
