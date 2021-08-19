@@ -9,6 +9,10 @@
 *.user
 *.userosscache
 *.sln.docstates
+.terraform*
+.terraform
+.vscode
+.terraform.lock.hcl
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

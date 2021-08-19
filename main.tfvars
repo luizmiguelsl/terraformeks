@@ -1,0 +1,5 @@
+env                           = "main"
+cidr                          = "10.247.48.0/22"
+instance_type                 = "t3.xlarge"
+k8s_service_account_namespace = "kube-system"
+k8s_service_account_name      = "cluster-autoscaler"
